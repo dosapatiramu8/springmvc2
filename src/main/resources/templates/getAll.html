@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyemleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+ <tr>
+ <th>Worker ID</th>
+			<th>NAME</th>
+</tr>
+<tr th:each="work: ${listOfwork}">
+
+   <td th:text="${ work.id }" ></td>
+   <td th:text="${ work.name }"></td>
+</tr>
+</table>
+ <a th:href="@{/new}">Add worker</a>
+</body>
+</html>
